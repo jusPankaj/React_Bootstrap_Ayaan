@@ -1,6 +1,8 @@
 import React from 'react'
 import bgHero from '../../Images/bg-hero.svg';
 import heroRight from '../../Images/health-professional-team.png';
+// import { Modal, Button } from 'react-bootstrap';
+
 
 const HeroSection = () => {
   return (
@@ -18,12 +20,12 @@ const HeroSection = () => {
                      <p className="p text-white my-3">Your Gateway to a Successful Medical Career Abroad</p>
                    </div>
                    <div className="primary-button-wrapper">
-                     <a href="#" className="btn btn-primary  text-white py-2 px-4 flex-wrap flex-sm-shrink-0">Get Started Today</a>
+                     <button href="#" data-bs-toggle="modal" data-bs-target="#contactModal" className="btn btn-secondary  text-white py-2 px-4 flex-wrap flex-sm-shrink-0">Get Started Today</button>
 
                    </div>
              </div>
              <div className="img-hero-right">
-                 <img className="health-professional img-fluid" src={heroRight}/>
+                 <img className="health-professional img-fluid" src={heroRight} alt='hero_image'/>
              </div>
            </div>
                

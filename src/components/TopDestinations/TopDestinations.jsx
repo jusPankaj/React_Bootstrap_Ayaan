@@ -28,11 +28,11 @@ const TopDestinations = () => {
                 </div>
                 <div class="d-flex justify-content-end  flex-column">
                   <div class="countries mb-2 d-flex align-items-center justify-content-end">
-                    <img class="img-fluid" src={country1} />
-                    <img class="img-fluid ml-m" src={country2} />
-                    <img class="img-fluid ml-m" src={country3} />
-                    <img class="img-fluid ml-m" src={country4} />
-                    <img class="img-fluid ml-m" src={country5} />
+                    <img class="img-fluid" src={country1} alt='country1'/>
+                    <img class="img-fluid ml-m" src={country2} alt='country2'/>
+                    <img class="img-fluid ml-m" src={country3} alt='country3'/>
+                    <img class="img-fluid ml-m" src={country4} alt='country4'/>
+                    <img class="img-fluid ml-m" src={country5} alt='country5'/>
                     <span class="country-more ml-m">+20</span>
                   </div>
                   <div className="primary-button-wrapper">

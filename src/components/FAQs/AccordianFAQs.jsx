@@ -11,13 +11,13 @@ const AccordianFAQs = ({ FAQsData }) => {
       {FAQsData.map((faq, index) => (
         <div onClick={() => handleClick(index)} key={index}>
           {console.log(faq)}
-          <div className="d-flex align-items-start accordian-wrapper p-4 py-5">
+          <div className="d-flex align-items-start accordian-wrapper p-4 pt-3 pb-2">
             <div className="d-flex flex-grow-1">
               <div className="faq-index ms-3 me-5">
                 {index <= 9 ? `0${index + 1}` : { index }}
               </div>
               <div>
-                <h4 className="text-sky mb-4 pt-1">{faq.Question}</h4>
+                <h5 className="text-sky  pt-2">{faq.Question}</h5>
                 {isActive === index && <p>{faq.Answer}</p>}
               </div>
             </div>
@@ -25,7 +25,7 @@ const AccordianFAQs = ({ FAQsData }) => {
             <div
               className={`faq-action ${
                 isActive === index ? "active" : ""
-              }  ms-5 me-3`}
+              }  ms-5 me-3 mb-2`}
             >
               {isActive === index ? (
                 <svg

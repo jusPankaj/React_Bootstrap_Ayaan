@@ -58,7 +58,7 @@ const SlickSlider = () => {
           <div className="col-md-6" key={index}>
             <div className="service-wrapper">
               <div className="service-content">
-                <img className="coaching-concept" src={slide.imgSrc} />
+                <img className="coaching-concept" src={slide.imgSrc} alt="Services_Image"/>
 
                 <h3 className="">{slide.title}</h3>
                 <hr />

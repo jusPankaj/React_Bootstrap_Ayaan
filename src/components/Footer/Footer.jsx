@@ -11,7 +11,7 @@ const Footer = () => {
         className="container-fluid bg-dark footer py-5 wow fadeIn"
         data-wow-delay="0.2s"
       >
-        <div className="container py-5">
+        <div className="container py-2">
           <div className="row g-5">
             <div className="col-md-6 col-lg-6 col-xl-4">
               <div className="footer-item d-flex flex-column">
@@ -298,16 +298,16 @@ const Footer = () => {
                 </p>
                 <div className="form-subscribe mt-3">
                   <form>
-                    <div class="input-group mb-3">
+                    <div className="input-group mb-3">
                       <input
                         type="text"
-                        class="form-control py-3"
+                        className="form-control py-3"
                         placeholder="Enter your email"
                         aria-label="Recipient's username"
                         aria-describedby="button-addon2"
                       />
                       <button
-                        class="btn btn-secondary btn-light"
+                        className="btn btn-secondary btn-light"
                         type="button"
                         id="button-addon2"
                       >
@@ -329,6 +329,33 @@ const Footer = () => {
               <span className="text-white">© Copyright Ayaan Overseas Advisors. All Rights Reserved </span>
             </div>
         </div>
+
+        <div className="modal fade" id="contactModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div className="modal-dialog">
+    <div className="modal-content">
+      <div className="modal-header">
+        <h5 className="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div className="modal-body">
+        <form>
+          <div className="mb-3">
+            <label for="recipient-name" className="col-form-label">Recipient:</label>
+            <input type="text" className="form-control" id="recipient-name" />
+          </div>
+          <div className="mb-3">
+            <label for="message-text" className="col-form-label">Message:</label>
+            <textarea className="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div className="modal-footer">
+        <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" className="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
     </div>
   );
 };

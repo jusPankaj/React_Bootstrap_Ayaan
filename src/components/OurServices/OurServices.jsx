@@ -1,6 +1,7 @@
 import React from 'react'
 import SlickSlider from './SlickSlider'
 import bgServices from "../../Images/bg-services.svg";
+import bgCTAsecond from'../../Images/CTA-2.svg';
 
 
 const OurServices = () => {
@@ -37,8 +38,36 @@ const OurServices = () => {
           </div>
         </div>
       </div>
+
+      {/* {CTA2} */}
+
+
+      <div
+        className="section CTA-2 py-5"
+        style={{ backgroundImage: `url(${bgCTAsecond})` }}
+      >
+        {/* <img className="bg-2" src="img/bg-2.png" /> */}
+        <div className="container py-5">
+          <h2 className=" text-white col-6 col-lg-6 col-md-12">
+            It uses a dictionary of over 200 Latin words, combined with a
+            handful of model sentence structures.
+          </h2>
+          <p className="text-normal text-white">
+            We'll get back to you within 24 hours
+          </p>
+
+          <div className="primary-button-wrapper">
+            <a
+              href="#"
+              className="btn btn-secondary btn-light text-white py-2 px-4 flex-wrap flex-sm-shrink-0"
+            >
+              Explore Our Services
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
 
-export default OurServices
+export default OurServices;

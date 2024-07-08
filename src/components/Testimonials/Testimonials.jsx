@@ -26,7 +26,7 @@ const Testimonials = () => {
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
                       </p>
                       <div className="autor-details d-flex align-items-center">
-                        <img className="author-pic me-3" src={testimonial} />
+                        <img className="author-pic me-3" src={testimonial} alt='author_image'/>
                         <div className="author-desc">
                           <h5 className="text-sky mb-0">John Doe</h5>
                           <p className="mb-0">Student</p>
@@ -42,7 +42,7 @@ const Testimonials = () => {
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
                       </p>
                       <div className="autor-details d-flex align-items-center">
-                        <img className="author-pic me-3" src={testimonial} />
+                        <img className="author-pic me-3" src={testimonial} alt='author_image'/>
                         <div className="author-desc">
                           <h5 className="text-sky mb-0">John Doe</h5>
                           <p className="mb-0">Student</p>
@@ -58,7 +58,7 @@ const Testimonials = () => {
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
                       </p>
                       <div className="autor-details d-flex align-items-center">
-                        <img className="author-pic me-3" src={testimonial} />
+                        <img className="author-pic me-3" src={testimonial} alt='author_image'/>
                         <div className="author-desc">
                           <h5 className="text-sky mb-0">John Doe</h5>
                           <p className="mb-0">Student</p>
@@ -74,7 +74,7 @@ const Testimonials = () => {
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
                       </p>
                       <div className="autor-details d-flex align-items-center">
-                        <img className="author-pic me-3" src={testimonial} />
+                        <img className="author-pic me-3" src={testimonial} alt='author_image'/>
                         <div className="author-desc">
                           <h5 className="text-sky mb-0">John Doe</h5>
                           <p className="mb-0">Student</p>
@@ -91,4 +91,4 @@ const Testimonials = () => {
   )
 }
 
-export default Testimonials
+export default Testimonials;

@@ -1,3 +1,6 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
 @font-face {
 	font-family: sansation-regular;
 	src: url("font/sansation/Sansation_Regular.ttf");
@@ -40,23 +43,26 @@
 }
 
 h1,
+h2{
+	font-family: sansation-bold;
+}
+
+h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-	font-family: sansation-bold;
 	color: #2C4058;
   /* font-weight: 600 !important; */
 }
-
 a {
 	text-decoration: none;
 }
 
-a:hover {
+/* a:hover {
 	opacity: 0.9;
-}
+} */
 
 .bg-primary{
   background-color: #5981B2 !important;
@@ -107,6 +113,7 @@ a:hover {
 	border-color: #5981B2;
 	font-weight: 500;
 	transition: .5s;
+  border: none;
 }
 
 .btn-secondary{
@@ -154,6 +161,7 @@ a:hover {
 .btn.btn-primary:hover {
 	box-shadow: inset 300px 0 0 0 var(--bs-light) !important;
 	color: var(--bs-primary) !important;
+  border-radius: 0;
 }
 
 .btn.btn-light {
@@ -841,101 +849,7 @@ a:hover {
 
 /*** Team End ***/
 
-/*** Contact Start ***/
-.contact {
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
-}
 
-
-.contact .contact-form .btn.btn-light {
-	box-shadow: inset 0 0 0 0 var(--bs-primary);
-}
-
-.contact .contact-form .btn.btn-light:hover {
-	box-shadow: inset 600px 0 0 0 var(--bs-primary) !important;
-	color: var(--bs-white) !important;
-}
-
-.contact .contact-form .form-floating input,
-.contact .contact-form .form-floating textarea,
-.contact .contact-form .form-floating label {
-	color: var(--bs-light);
-}
-
-
-/* Testimonial Section Title Start */
-.contact .section-title {
-	max-width: 900px;
-	text-align: center;
-	margin: 0 auto;
-}
-
-.contact .section-title .sub-style {
-	position: relative;
-	display: inline-block;
-	text-transform: uppercase;
-	color: var(--bs-primary);
-}
-
-.contact .section-title .sub-style::before {
-	content: "";
-	width: 100px;
-	position: absolute;
-	top: 50%;
-	left: 0;
-	transform: translateY(-50%);
-	margin-top: 8px;
-	margin-left: -100px;
-	border: 1px solid var(--bs-white) !important;
-}
-
-.contact .section-title .sub-style::after {
-	content: "";
-	width: 50px;
-	position: absolute;
-	top: 50%;
-	left: 0;
-	transform: translateY(-50%);
-	margin-bottom: 5px;
-	margin-left: -50px;
-	border: 1px solid var(--bs-white) !important;
-}
-
-.contact .section-title .sub-title {
-	position: relative;
-	display: inline-block;
-	text-transform: uppercase;
-	color: var(--bs-primary);
-}
-
-.contact .section-title .sub-title::before {
-	content: "";
-	width: 100px;
-	position: absolute;
-	top: 50%;
-	right: 0;
-	transform: translateY(-50%);
-	margin-top: 8px;
-	margin-right: -100px;
-	border: 1px solid var(--bs-white) !important;
-}
-
-.contact .section-title .sub-title::after {
-	content: "";
-	width: 50px;
-	position: absolute;
-	top: 50%;
-	right: 0;
-	transform: translateY(-50%);
-	margin-bottom: 8px;
-	margin-right: -50px;
-	border: 1px solid var(--bs-white) !important;
-}
-
-/*** Contact End ***/
 
 
 /*** Footer Start ***/
@@ -947,12 +861,13 @@ a:hover {
 
 .footer .footer-item a {
 	line-height: 35px;
-	color: var(--bs-body);
+	color: #CCCCCC;
 	transition: 0.5s;
 }
 
 .footer .footer-item p {
-	line-height: 35px;
+	line-height: 30px;
+  color: #CCCCCC;
 }
 
 .footer .footer-item a:hover {
@@ -964,7 +879,7 @@ a:hover {
 
 /*** copyright Start ***/
 .copyright {
-	background: var(--bs-dark) !important;
+	background: #26384D !important;
 }
 
 /*** copyright end ***/
@@ -1001,7 +916,7 @@ a:hover {
 
 .img-hero-right {
 	position: absolute;
-	bottom: -140px;
+	bottom: -168px;
 	max-width: 600px;
 	right: 70px;
 	mix-blend-mode: lighten;
@@ -1089,6 +1004,11 @@ align-items: center;
 justify-content: center;
 font-weight: 500;
 font-size: 22px;
+cursor: pointer;
+transition: all linear 0.3s;
+}
+.faq-action:hover{
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .faq-action.active{
@@ -1110,4 +1030,148 @@ color: rgba(60, 60, 67, 0.5);
 
 opacity: 0.3;
 
+}
+
+
+.or-wrapper{
+  position: relative;
+}
+.or {
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  padding: 0 15px;
+  /* Or */
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height, or 125% */
+letter-spacing: 0.02em;
+text-transform: uppercase;
+
+/* Body - Paragraph */
+color: rgba(44, 64, 88, 0.8);
+
+
+}
+
+
+.form-subscribe input{
+padding: 14px 32px;
+background: rgba(255, 255, 255, 0.1);
+border-radius: 8px 0px 0px 8px;
+border: none;
+color: #ffffff;
+
+}
+
+.form-subscribe input::placeholder{
+  color: #ffffff;
+}
+
+
+@media (max-width: 1600px){
+  body{
+    font-size: 14px;
+  }
+  h1{
+    font-size: 50px !important;
+    line-height: 52px !important;
+  }
+  h1.mb-4{
+    margin-bottom: 10px !important;
+  }
+  .hero-section p {
+    font-size: 18px;
+  }
+  .service .service-item .service-content .service-content-inner {
+    font-size: 18px;
+  }
+  .h2, h2 {
+    font-size: 28px;
+}
+.h3, h3 {
+  font-size: 22px;
+}
+.h5, h5 {
+  font-size: 18px;
+}
+.section-title .sub-style{
+  font-size: 16px;
+}
+.btn {
+  font-weight: 400;
+  font-size: 15px;
+}
+} 
+
+@media (max-width: 767px){
+  .img-hero-right {
+    display: none;
+  }
+}
+
+
+.services{
+  overflow-x: hidden;
+}
+.services .slick-slider{
+  overflow: visible;
+}
+.services .slick-slide {
+  padding: 0 10px; /* Adjust the value to your desired gap */
+}
+
+.services .slick-list {
+  margin: 0 -10px; /* Adjust according to the padding to balance the layout */
+  overflow: visible;
+}
+
+.services .slick-slide{
+  opacity: 0.5;
+}
+
+.services .slick-slide.slick-active, .services .slick-slide.slick-active{
+  opacity: 1;
+}
+
+.services .slick-dots{
+  bottom: -65px;
+}
+
+.services .slick-prev, .services .slick-prev:hover{
+	right: 40px;
+    top: -60px;
+    left: auto;
+	background-image: url(Images/arrow-prev.png);
+	height: 50px;
+    width: 50px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+}
+
+.services .slick-next, .services .slick-next:hover{
+	right: 0;
+    top: -60px;
+    left: auto;
+	background-image: url(Images/arrow-next.png);
+	height: 50px;
+    width: 50px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+}
+
+.services .slick-prev:before, .services .slick-next:before{
+	display: none;
+}
+
+.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus{
+	opacity: 0.8;
 }

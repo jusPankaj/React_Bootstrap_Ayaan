@@ -1,10 +1,35 @@
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import mapContact from "../../Images/map-contact.png";
 import call from "../../Images/call.png";
 import address from "../../Images/address.png";
 import envelope from "../../Images/envelope.png";
 import whatsapp from "../../Images/whatsapp.png";
 
+
 const ContactUs = () => {
+
+   const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_eo3d195', 'template_ijwo6km', form.current, {
+        publicKey: 'WwqOYZ1edTT8O37fg',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          alert("Message Sent");
+          e.target.reset();
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
+
   return (
     <div>
       <div className="section contact py-5">
@@ -28,7 +53,7 @@ const ContactUs = () => {
           <div className="row">
             <div className="col-lg-7 col-xl-6">
               <div className="contact-form">
-                <form className="mb-5">
+                <form className="mb-5" ref={form} onSubmit={sendEmail}>
                   <div className="row">
                     <div className="col-md-6">
                       <div className="form-floating mb-3">
@@ -38,6 +63,7 @@ const ContactUs = () => {
                           id="floatingInput"
                           placeholder="John Doe"
                           onChange={(e) => e.target.value}
+                          name='name'
                         />
                         <label for="floatingInput">Your Name</label>
                       </div>
@@ -49,6 +75,8 @@ const ContactUs = () => {
                           className="form-control"
                           id="floatingInput"
                           placeholder="999 88 77 66"
+                          onChange={(e) => e.target.value}
+                          name='contact_number'
                         />
                         <label for="floatingInput" className="text-black">
                           Contact Number
@@ -62,6 +90,8 @@ const ContactUs = () => {
                           className="form-control"
                           id="floatingInput"
                           placeholder="name@example.com"
+                          onChange={(e) => e.target.value}
+                          name='email'
                         />
                         <label for="floatingInput">Email address</label>
                       </div>
@@ -72,8 +102,10 @@ const ContactUs = () => {
                           className="form-select"
                           id="floatingSelect"
                           aria-label="Floating label select example"
+                          onChange={(e) => e.target.value}
+                          name='country'
                         >
-                          <option selected>Open this select country</option>
+                          <option selected>Select country</option>
                           <option value="1">India</option>
                           <option value="2">USA</option>
                           <option value="3">Japan</option>
@@ -90,6 +122,8 @@ const ContactUs = () => {
                           placeholder="Leave a comment here"
                           id="floatingTextarea2"
                           style={{ height: "10rem" }}
+                          onChange={(e) => e.target.value}
+                          name='message'
                         ></textarea>
                         <label for="floatingTextarea2">Messages</label>
                       </div>
@@ -107,13 +141,13 @@ const ContactUs = () => {
               </div>
               <div className="contact-via d-flex align-items-center mb-5">
                 <div className="contact-us-via">CONTACT US VIA</div>
-                <img className="img-fluid ms-2" src={whatsapp} />
+                <img className="img-fluid ms-2" src={whatsapp} alt='whatsapp'/>
               </div>
 
               <div className="contact-info d-flex justify-content-between">
                 <div className="d-flex align-items-start">
                   <div className="icon-info me-2">
-                    <img className="img-4" src={call} />
+                    <img className="img-4" src={call} alt='call'/>
                   </div>
                   <div className="info-desc ">
                     <div className="text-sky">Phone</div>
@@ -122,7 +156,7 @@ const ContactUs = () => {
                 </div>
                 <div className="d-flex align-items-start">
                   <div className="icon-info me-2">
-                    <img className="img-4" src={address} />
+                    <img className="img-4" src={address} alt='address'/>
                   </div>
                   <div className="info-desc ">
                     <div className="text-sky">Address</div>
@@ -131,7 +165,7 @@ const ContactUs = () => {
                 </div>
                 <div className="d-flex align-items-start">
                   <div className="icon-info me-2">
-                    <img className="img-4" src={envelope} />
+                    <img className="img-4" src={envelope} alt='envelope'/>
                   </div>
                   <div className="info-desc ">
                     <div className="text-sky">Email</div>
@@ -143,7 +177,7 @@ const ContactUs = () => {
               </div>
             </div>
             <div className="col-lg-5 col-xl-6">
-              <img className="map-conatct img-fluid" src={mapContact} />
+              <img className="map-conatct img-fluid" src={mapContact} alt='map'/>
             </div>
           </div>
         </div>
@@ -153,3 +187,5 @@ const ContactUs = () => {
 };
 
 export default ContactUs;
+
+
